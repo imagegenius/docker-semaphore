@@ -1,0 +1,25 @@
+---
+
+# jenkins variables
+project_name: docker-semaphore
+external_type: github_stable
+release_type: stable
+release_tag: latest
+ig_branch: main
+repo_vars:
+  - EXT_GIT_BRANCH = 'develop'
+  - EXT_USER = 'ansible-semaphore'
+  - EXT_REPO = 'semaphore'
+  - BUILD_VERSION_ARG = 'SEMAPHORE_VERSION'
+  - IG_USER = 'imagegenius'
+  - IG_REPO = 'docker-semaphore'
+  - CONTAINER_NAME = 'semaphore'
+  - DIST_IMAGE = 'alpine'
+  - MULTIARCH = 'true'
+  - CI = 'true'
+  - CI_WEB = 'true'
+  - CI_PORT = '3000'
+  - CI_SSL = 'false'
+  - CI_DOCKERENV = 'SEMAPHORE_DB_DIALECT=bolt|SEMAPHORE_ADMIN_PASSWORD=password|SEMAPHORE_ADMIN_NAME=admin|SEMAPHORE_ADMIN_EMAIL=admin@localhost|SEMAPHORE_ADMIN=admin|SEMAPHORE_ACCESS_KEY_ENCRYPTION=supersecretkey'
+  - CI_AUTH = ''
+  - CI_WEBPATH = ''

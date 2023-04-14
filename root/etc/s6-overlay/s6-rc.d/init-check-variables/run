@@ -1,0 +1,23 @@
+#!/usr/bin/with-contenv bash
+
+check_var() {
+    if [ -z "${!1}" ]; then
+        echo "Error: ${2}"
+        echo "See the readme for more information: https://github.com/imagegenius/docker-semaphore#variables"
+        sleep infinity
+    fi
+}
+
+if [ -n "${SEMAPHORE_DB_DIALECT:-}" ] && [ "${SEMAPHORE_DB_DIALECT}" != "bolt" ]; then
+    check_var "SEMAPHORE_DB_USER" "No database user has been specified in the SEMAPHORE_DB_USER variable."
+    check_var "SEMAPHORE_DB_PASS" "No database password has been specified in the SEMAPHORE_DB_PASS variable."
+    check_var "SEMAPHORE_DB_HOST" "No database host has been specified in the SEMAPHORE_DB_HOST variable."
+    check_var "SEMAPHORE_DB_PORT" "No database port has been specified in the SEMAPHORE_DB_PORT variable."
+    check_var "SEMAPHORE_DB" "No database has been specified in the SEMAPHORE_DB variable."
+fi
+
+check_var "SEMAPHORE_ADMIN_PASSWORD" "No admin password has been specified in the SEMAPHORE_ADMIN_PASSWORD variable."
+check_var "SEMAPHORE_ADMIN_NAME" "No admin name has been specified in the SEMAPHORE_ADMIN_NAME variable."
+check_var "SEMAPHORE_ADMIN_EMAIL" "No admin email has been specified in the SEMAPHORE_ADMIN_EMAIL variable."
+check_var "SEMAPHORE_ADMIN" "No admin has been specified in the SEMAPHORE_ADMIN variable."
+check_var "SEMAPHORE_ACCESS_KEY_ENCRYPTION" "No encryption key has been specified in the SEMAPHORE_ACCESS_KEY_ENCRYPTION variable."

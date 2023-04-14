@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bash
+
+# make folders
+mkdir -p \
+    /config/{playbooks,.ssh}
+
+# quietly initialise config
+if [ ! -f /config/config.json ]; then
+    semaphore-wrapper semaphore &>/dev/null
+fi
+
+# permissions
+chown -R abc:abc \
+    /config \
+    /tmp/semaphore
