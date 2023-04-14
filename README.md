@@ -29,7 +29,11 @@ This image supports the following architectures:
 
 The WebUI can be accessed at `http://your-ip:3000`, login with the admin user/password set in the variables.
 
-The home for Semaphore is set to `/config`, so that ssh keys can be stored in `/config/.ssh`
+The home for Semaphore (`abc`) is set to `/config`, so that SSH keys can be stored in `/config/.ssh`.
+
+To get SSH working, you first need to SSH into the client (with keys of course). Add your key to `/config/.ssh/id_rsa`, make sure that you run `chmod 600 id_rsa` and `chown abc:abc id_rsa`.
+
+You can now run `s6-setuidgid abc /bin/bash` to open a shell as `abc`, and run your SSH commands (`ssh <user>@<host>`), and you should be prompted with `yes`/`no`, type `yes`, then exit the SSH session, Semaphore/Ansible should now be able to SSH into that client.
 
 ## Usage
 
