@@ -158,4 +158,5 @@ Instructions for updating containers:
 
 ## Versions
 
+* **28.04.23:** - Added rsync package.
 * **14.04.23:** - Initial release.
