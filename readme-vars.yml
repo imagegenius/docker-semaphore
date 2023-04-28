@@ -67,4 +67,5 @@ app_setup_block: |
 
 # changelog
 changelogs:
+  - { date: "28.04.23:", desc: "Added rsync package." }
   - { date: "14.04.23:", desc: "Initial release." }

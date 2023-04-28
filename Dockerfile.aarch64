@@ -15,6 +15,9 @@ RUN \
     git \
     gcc \
     g++ && \
+  echo "**** install runtime packages ****" && \
+  apk add --no-cache bash \
+    rsync && \
   echo "**** download semaphore ****" && \
   if [ -z ${SEMAPHORE_VERSION} ]; then \
     SEMAPHORE_VERSION=$(curl -sL https://api.github.com/repos/ansible-semaphore/semaphore/releases/latest | \
