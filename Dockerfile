@@ -35,7 +35,7 @@ RUN \
   mv ./bin/semaphore /out
 
 # runtime
-FROM ghcr.io/imagegenius/baseimage-alpine:3.17
+FROM ghcr.io/imagegenius/baseimage-alpine:3.18
 
 # set version label
 ARG BUILD_DATE
