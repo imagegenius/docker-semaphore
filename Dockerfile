@@ -1,5 +1,5 @@
 # build semaphore
-FROM golang:1.18.3-alpine3.16 as builder
+FROM golang:1.19-alpine3.18 as builder
 
 # set version
 ARG SEMAPHORE_VERSION
@@ -7,17 +7,14 @@ ARG SEMAPHORE_VERSION
 RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache \
-    libc-dev \
-    jq \
     curl \
-    nodejs \
-    npm \
-    git \
+    g++ \
     gcc \
-    g++ && \
-  echo "**** install runtime packages ****" && \
-  apk add --no-cache bash \
-    rsync && \
+    git \
+    jq \
+    libc-dev \
+    nodejs \
+    npm && \
   echo "**** download semaphore ****" && \
   if [ -z ${SEMAPHORE_VERSION} ]; then \
     SEMAPHORE_VERSION=$(curl -sL https://api.github.com/repos/ansible-semaphore/semaphore/releases/latest | \
@@ -54,12 +51,13 @@ COPY --from=builder /out/* /usr/local/bin/
 RUN \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
-    sshpass \
-    git \
     ansible \
+    git \
     mysql-client \
     openssh-client-default \
-    py3-aiohttp && \
+    py3-aiohttp \
+    rsync \
+    sshpass && \
   echo "**** cleanup ****" && \
   for cleanfiles in *.pyc *.pyo; do \
     find /usr/lib/python3.* -iname "${cleanfiles}" -delete; \
