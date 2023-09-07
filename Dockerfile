@@ -1,5 +1,5 @@
 # build semaphore
-FROM golang:1.19-alpine3.18 as builder
+FROM golang:1.19-alpine3.16 as builder
 
 # set version
 ARG SEMAPHORE_VERSION
@@ -8,7 +8,6 @@ RUN \
   echo "**** install build packages ****" && \
   apk add --no-cache \
     curl \
-    g++ \
     gcc \
     git \
     jq \
@@ -23,9 +22,12 @@ RUN \
   git clone https://github.com/ansible-semaphore/semaphore.git /go/src/github.com/ansible-semaphore/semaphore && \
   cd /go/src/github.com/ansible-semaphore/semaphore && \
   git checkout ${SEMAPHORE_VERSION} && \
+  set -e && \
   (cd $(go env GOPATH) && curl -sL https://taskfile.dev/install.sh | sh) && \
   task deps && \
+  set +e && \
   task compile && \
+  set -e && \
   task build:local GOOS=linux GOARCH=amd64 && \
   mkdir /out && \
   mv ./deployment/docker/common/semaphore-wrapper /out && \
