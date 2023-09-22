@@ -38,7 +38,7 @@ git-perl                                2.40.1-r0                           apk
 github.com/Azure/go-ntlmssp             v0.0.0-20200615164410-66371956d46c  go-module  
 github.com/ProtonMail/go-crypto         v0.0.0-20221026131551-cf6655e29de4  go-module  
 github.com/Sirupsen/logrus              v1.0.4                              go-module  
-github.com/ansible-semaphore/semaphore  v0.0.0-20230903172845-8fb7f3060185  go-module  
+github.com/ansible-semaphore/semaphore  v0.0.0-20230920183829-7b57fa640004  go-module  
 github.com/cloudflare/circl             v1.1.0                              go-module  
 github.com/coreos/go-oidc/v3            v3.5.0                              go-module  
 github.com/emirpasic/gods               v1.18.1                             go-module  
