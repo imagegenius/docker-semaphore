@@ -13,7 +13,6 @@ if [ -n "${SEMAPHORE_DB_DIALECT:-}" ] && [ "${SEMAPHORE_DB_DIALECT}" != "bolt" ]
     check_var "SEMAPHORE_DB_USER" "database user"
     check_var "SEMAPHORE_DB_PASS" "database password"
     check_var "SEMAPHORE_DB_HOST" "database host"
-    check_var "SEMAPHORE_DB_PORT" "database port"
     check_var "SEMAPHORE_DB"      "database name"
 fi
 

@@ -40,7 +40,6 @@ cap_add_param: false
 opt_param_usage_include_env: true
 opt_param_env_vars:
   - { env_var: "SEMAPHORE_DB_HOST", env_value: "192.168.1.x", desc: "Host IP of PostgreSQL or MySQL" }
-  - { env_var: "SEMAPHORE_DB_PORT", env_value: "", desc: "Port to connect to PostgreSQL (`5432`) or MySQL (`3306`)" }
   - { env_var: "SEMAPHORE_DB_USER", env_value: "semaphore", desc: "PostgreSQL/MySQL database user" }
   - { env_var: "SEMAPHORE_DB_PASS", env_value: "semaphore", desc: "PostgreSQL/MySQL database password" }
   - { env_var: "SEMAPHORE_DB", env_value: "semaphore", desc: "PostgreSQL/MySQL database" }

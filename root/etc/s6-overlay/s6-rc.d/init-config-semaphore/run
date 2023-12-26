@@ -7,7 +7,7 @@ mkdir -p \
 
 # quietly initialise config
 if [ ! -f /config/config.json ]; then
-    echo "Initialising Semaphore, if the database is unreachable the container will appear unresponsive for upto 30 seconds then start spitting errors."
+    echo "Initialising Semaphore, if the database is unreachable the container will appear unresponsive for up to 30 seconds then start spitting errors."
     semaphore-wrapper semaphore &>/dev/null
 fi
 
