@@ -1,5 +1,5 @@
 # build semaphore
-FROM golang:1.19-alpine3.16 as builder
+FROM golang:1.20-alpine3.18 as builder
 
 # set version
 ARG SEMAPHORE_VERSION
@@ -8,10 +8,10 @@ RUN set -e && \
   echo "**** install build packages ****" && \
   apk add --no-cache \
     curl \
+    g++ \
     gcc \
     git \
     jq \
-    libc-dev \
     nodejs \
     npm && \
   echo "**** download semaphore ****" && \
@@ -22,7 +22,8 @@ RUN set -e && \
   git clone https://github.com/ansible-semaphore/semaphore.git /go/src/github.com/ansible-semaphore/semaphore && \
   cd /go/src/github.com/ansible-semaphore/semaphore && \
   git checkout ${SEMAPHORE_VERSION} && \
-  (cd $(go env GOPATH) && curl -sL https://taskfile.dev/install.sh | sh) && \
+  (cd $(go env GOPATH) && go install github.com/go-task/task/v3/cmd/task@latest) && \
+  git config --global --add safe.directory /go/src/github.com/ansible-semaphore/semaphore && \
   task deps && \
   task compile && \
   task build:local GOOS=linux GOARCH=amd64 && \
@@ -43,28 +44,46 @@ LABEL maintainer="hydazz"
 # environment settings
 ENV SEMAPHORE_TMP_PATH="/tmp/semaphore" \
   SEMAPHORE_CONFIG_PATH="/config" \
-  SEMAPHORE_DB_PATH="/config"
+  SEMAPHORE_DB_PATH="/config" \
+  ANSIBLE_HOST_KEY_CHECKING=False
 
 COPY --from=builder /out/* /usr/local/bin/
 
 RUN \
+  echo "**** install build packages ****" && \
+  apk add --no-cache --virtual=build-dependencies \
+    build-base \
+    libffi-dev \
+    openssl-dev \
+    python3-dev && \
   echo "**** install runtime packages ****" && \
   apk add --no-cache \
-    ansible \
+    curl-dev \
+    g++ \
+    gcc \
     git \
     mysql-client \
-    nano \
+    nodejs \
+    npm \
     openssh-client-default \
-    py3-aiohttp \
+    openssl \
+    py-openssl \
     py3-pip \
+    python3 \
     rsync \
     sshpass && \
+  pip3 install -U --no-cache \
+    cffi \
+    pip && \
   pip3 install --no-cache \
+    ansible \
     passlib && \
   echo "**** cleanup ****" && \
   for cleanfiles in *.pyc *.pyo; do \
     find /usr/lib/python3.* -iname "${cleanfiles}" -delete; \
   done && \
+  apk del --purge \
+    build-dependencies && \
   rm -rf \
     /tmp/*
 
