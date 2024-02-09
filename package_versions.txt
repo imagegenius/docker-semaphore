@@ -25,7 +25,7 @@ NAME                                    VERSION                             TYPE
 @tufjs/canonical-json                   1.0.0                               npm        
 @tufjs/models                           1.0.4                               npm        
 Jinja2                                  3.1.3                               python     
-MarkupSafe                              2.1.4                               python     
+MarkupSafe                              2.1.5                               python     
 PyYAML                                  6.0.1                               python     
 Simple Launcher                         1.1.0.14                            dotnet     
 abbrev                                  1.1.1                               npm        
@@ -42,8 +42,8 @@ ansi-regex                              5.0.1                               npm
 ansi-regex                              6.0.1                               npm        
 ansi-styles                             4.3.0                               npm        
 ansi-styles                             6.2.1                               npm        
-ansible                                 9.1.0                               python     
-ansible-core                            2.16.2                              python     
+ansible                                 9.2.0                               python     
+ansible-core                            2.16.3                              python     
 apk-tools                               2.14.0-r2                           apk        
 aproba                                  2.0.0                               npm        
 archy                                   1.0.0                               npm        
@@ -316,7 +316,7 @@ pcre2                                   10.42-r1                            apk
 perl                                    5.36.2-r0                           apk        
 perl-error                              0.17029-r1                          apk        
 perl-git                                2.40.1-r0                           apk        
-pip                                     23.3.2                              python     
+pip                                     24.0                                python     
 pkgconf                                 1.9.5-r0                            apk        
 popt                                    1.19-r2                             apk        
 postcss-selector-parser                 6.0.12                              npm        
@@ -388,7 +388,7 @@ sshpass                                 1.10-r0                             apk
 ssl_client                              1.36.1-r5                           apk        
 ssri                                    10.0.4                              npm        
 ssri                                    9.0.1                               npm        
-stdlib                                  go1.20.13                           go-module  
+stdlib                                  go1.20.14                           go-module  
 string-width                            4.2.3                               npm        
 string-width                            5.1.2                               npm        
 string_decoder                          1.1.1                               npm        
