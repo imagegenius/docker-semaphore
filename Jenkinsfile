@@ -15,7 +15,7 @@ pipeline {
     BUILDS_DISCORD=credentials('build_webhook_url')
     GITHUB_TOKEN=credentials('github_token')
     EXT_GIT_BRANCH = 'develop'
-    EXT_USER = 'ansible-semaphore'
+    EXT_USER = 'semaphoreui'
     EXT_REPO = 'semaphore'
     BUILD_VERSION_ARG = 'SEMAPHORE_VERSION'
     IG_USER = 'imagegenius'
