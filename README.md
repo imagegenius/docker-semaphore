@@ -7,9 +7,9 @@
 [![Jenkins Build](https://img.shields.io/jenkins/build?labelColor=555555&logoColor=ffffff&style=for-the-badge&jobUrl=https%3A%2F%2Fci.imagegenius.io%2Fjob%2FDocker-Pipeline-Builders%2Fjob%2Fdocker-semaphore%2Fjob%2Fmain%2F&logo=jenkins)](https://ci.imagegenius.io/job/Docker-Pipeline-Builders/job/docker-semaphore/job/main/)
 [![IG CI](https://img.shields.io/badge/dynamic/yaml?color=007EC6&labelColor=555555&logoColor=ffffff&style=for-the-badge&label=CI&query=CI&url=https%3A%2F%2Fci-tests.imagegenius.io%2Fsemaphore%2Flatest-main%2Fci-status.yml)](https://ci-tests.imagegenius.io/semaphore/latest-main/index.html)
 
-[Semaphore](https://ansible-semaphore.com/) is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
+[Semaphore](https://semaphoreui.com/) is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system.
 
-[![semaphore](https://raw.githubusercontent.com/imagegenius/templates/main/unraid/img/semaphore.png)](https://ansible-semaphore.com/)
+[![semaphore](https://raw.githubusercontent.com/imagegenius/templates/main/unraid/img/semaphore.png)](https://semaphoreui.com/)
 
 ## Supported Architectures
 
