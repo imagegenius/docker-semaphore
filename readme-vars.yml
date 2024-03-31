@@ -2,7 +2,7 @@
 
 # project information
 project_name: semaphore
-project_url: "https://ansible-semaphore.com/"
+project_url: "https://semaphoreui.com/"
 project_logo: "https://raw.githubusercontent.com/imagegenius/templates/main/unraid/img/semaphore.png"
 project_blurb: "Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system."
 project_github_repo_url: "https://github.com/imagegenius/docker-{{ project_name }}"

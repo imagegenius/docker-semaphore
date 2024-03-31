@@ -16,15 +16,15 @@ RUN set -e && \
     npm && \
   echo "**** download semaphore ****" && \
   if [ -z ${SEMAPHORE_VERSION} ]; then \
-    SEMAPHORE_VERSION=$(curl -sL https://api.github.com/repos/ansible-semaphore/semaphore/releases/latest | \
+    SEMAPHORE_VERSION=$(curl -sL https://api.github.com/repos/semaphoreui/semaphore/releases/latest | \
       jq -r '.tag_name'); \
   fi && \
-  git clone https://github.com/ansible-semaphore/semaphore.git /go/src/github.com/ansible-semaphore/semaphore && \
-  cd /go/src/github.com/ansible-semaphore/semaphore && \
+  git clone https://github.com/semaphoreui/semaphore.git /go/src/github.com/semaphoreui/semaphore && \
+  cd /go/src/github.com/semaphoreui/semaphore && \
   git checkout ${SEMAPHORE_VERSION} && \
   sed -i 's/\$(uname -m)/arm64/g' Taskfile.yml && \
   (cd $(go env GOPATH) && go install github.com/go-task/task/v3/cmd/task@latest) && \
-  git config --global --add safe.directory /go/src/github.com/ansible-semaphore/semaphore && \
+  git config --global --add safe.directory /go/src/github.com/semaphoreui/semaphore && \
   task deps && \
   task compile && \
   task build:local GOOS=linux GOARCH=arm64 && \
