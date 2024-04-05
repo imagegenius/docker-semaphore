@@ -283,7 +283,7 @@ netcat-openbsd                          1.219-r1                              ap
 nghttp2-dev                             1.57.0-r0                             apk                         
 nghttp2-libs                            1.57.0-r0                             apk                         
 node-gyp                                9.3.1                                 npm                         
-nodejs                                  18.19.1-r0                            apk                         
+nodejs                                  18.20.1-r0                            apk                         
 nopt                                    6.0.0                                 npm                         
 nopt                                    7.1.0                                 npm                         
 normalize-package-data                  5.0.0                                 npm                         
@@ -392,7 +392,7 @@ sshpass                                 1.10-r0                               ap
 ssl_client                              1.36.1-r5                             apk                         
 ssri                                    10.0.4                                npm                         
 ssri                                    9.0.1                                 npm                         
-stdlib                                  go1.21.8                              go-module                   
+stdlib                                  go1.21.9                              go-module                   
 string-width                            4.2.3                                 npm        (+1 duplicate)   
 string-width                            5.1.2                                 npm        (+1 duplicate)   
 string_decoder                          1.1.1                                 npm                         
