@@ -43,8 +43,8 @@ ansi-regex                              6.0.1                                 np
 ansi-styles                             4.3.0                                 npm                         
 ansi-styles                             6.2.1                                 npm                         
 ansible                                 9.4.0                                 python                      
-ansible-core                            2.16.5                                python                      
-apk-tools                               2.14.0-r2                             apk                         
+ansible-core                            2.16.6                                python                      
+apk-tools                               2.14.3-r1                             apk                         
 aproba                                  2.0.0                                 npm                         
 archy                                   1.0.0                                 npm                         
 are-we-there-yet                        3.0.1                                 npm                         
