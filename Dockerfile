@@ -1,5 +1,5 @@
 # build semaphore
-FROM golang:1.21-alpine3.18 as builder
+FROM golang:1.21-alpine3.19 as builder
 
 # set version
 ARG SEMAPHORE_VERSION
@@ -32,7 +32,7 @@ RUN set -e && \
   mv ./bin/semaphore /out
 
 # runtime
-FROM ghcr.io/imagegenius/baseimage-alpine:3.18
+FROM ghcr.io/imagegenius/baseimage-alpine:3.19
 
 # set version label
 ARG BUILD_DATE
