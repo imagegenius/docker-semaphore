@@ -70,9 +70,10 @@ RUN \
     openssl \
     py-openssl \
     py3-pip \
-    python3 \
+    py3-virtualenv \
     rsync \
     sshpass && \
+  python3 -m venv /lsiopy && \
   pip3 install -U --no-cache \
     cffi \
     pip && \
