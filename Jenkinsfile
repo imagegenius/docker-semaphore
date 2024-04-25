@@ -366,12 +366,12 @@ pipeline {
                   git add unraid/${CONTAINER_NAME}.xml
                   git commit -m 'Bot Updating Unraid Template'
                 fi
-                git pull https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/linuxserver/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} --rebase
-                git push https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/linuxserver/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} || \
+                git pull https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/imagegenius/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} --rebase
+                git push https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/imagegenius/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} || \
                   (MAXWAIT="10" && echo "Push to unraid templates failed, trying again in ${MAXWAIT} seconds" && \
                   sleep $((RANDOM % MAXWAIT)) && \
-                  git pull https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/linuxserver/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} --rebase && \
-                  git push https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/linuxserver/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH})
+                  git pull https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/imagegenius/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH} --rebase && \
+                  git push https://ImageGeniusCI:${GITHUB_TOKEN}@github.com/imagegenius/templates.git ${GH_TEMPLATES_DEFAULT_BRANCH})
               else
                 echo "No updates to Unraid template needed, skipping"
               fi
