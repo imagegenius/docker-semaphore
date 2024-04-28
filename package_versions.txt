@@ -123,9 +123,10 @@ git-perl                                2.43.0-r0                             ap
 github.com/Azure/go-ntlmssp             v0.0.0-20221128193559-754e69321358    go-module                    
 github.com/Masterminds/squirrel         v1.5.4                                go-module                    
 github.com/ProtonMail/go-crypto         v1.0.0                                go-module                    
-github.com/ansible-semaphore/semaphore  v0.0.0-20240327170118-e26b9fafcb85    go-module                    
+github.com/ansible-semaphore/semaphore  v0.0.0-20240428175014-85f7d75720cd    go-module                    
 github.com/cloudflare/circl             v1.3.7                                go-module                    
 github.com/coreos/go-oidc/v3            v3.9.0                                go-module                    
+github.com/creack/pty                   v1.1.21                               go-module                    
 github.com/cyphar/filepath-securejoin   v0.2.4                                go-module                    
 github.com/emirpasic/gods               v1.18.1                               go-module                    
 github.com/felixge/httpsnoop            v1.0.4                                go-module                    
@@ -134,7 +135,7 @@ github.com/go-git/gcfg                  v1.5.1-0.20230307220236-3a3c6141e376  go
 github.com/go-git/go-billy/v5           v5.5.0                                go-module                    
 github.com/go-git/go-git/v5             v5.11.0                               go-module                    
 github.com/go-gorp/gorp/v3              v3.1.0                                go-module                    
-github.com/go-jose/go-jose/v3           v3.0.2                                go-module                    
+github.com/go-jose/go-jose/v3           v3.0.3                                go-module                    
 github.com/go-ldap/ldap/v3              v3.4.6                                go-module                    
 github.com/go-sql-driver/mysql          v1.7.1                                go-module                    
 github.com/golang/groupcache            v0.0.0-20210331224755-41bb18bfe9da    go-module                    
@@ -152,7 +153,6 @@ github.com/lann/builder                 v0.0.0-20180802200727-47ae307949d0    go
 github.com/lann/ps                      v0.0.0-20150810152359-62de8c46ede0    go-module                    
 github.com/lib/pq                       v1.10.9                               go-module                    
 github.com/pjbgf/sha1cd                 v0.3.0                                go-module                    
-github.com/pkg/errors                   v0.9.1                                go-module                    
 github.com/robfig/cron/v3               v3.0.1                                go-module                    
 github.com/sergi/go-diff                v1.3.1                                go-module                    
 github.com/sirupsen/logrus              v1.9.3                                go-module                    
@@ -164,10 +164,10 @@ github.com/xanzy/ssh-agent              v0.3.3                                go
 glob                                    10.3.10                               npm                          
 gmp                                     6.3.0-r0                              apk                          
 go.etcd.io/bbolt                        v1.3.9                                go-module                    
-golang.org/x/crypto                     v0.20.0                               go-module                    
-golang.org/x/net                        v0.21.0                               go-module                    
+golang.org/x/crypto                     v0.21.0                               go-module                    
+golang.org/x/net                        v0.23.0                               go-module                    
 golang.org/x/oauth2                     v0.17.0                               go-module                    
-golang.org/x/sys                        v0.17.0                               go-module                    
+golang.org/x/sys                        v0.18.0                               go-module                    
 gopkg.in/warnings.v0                    v0.1.2                                go-module                    
 graceful-fs                             4.2.11                                npm                          
 grafana-ansible-collection              2.1.4                                 npm                          
