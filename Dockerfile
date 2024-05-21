@@ -1,8 +1,10 @@
 # build semaphore
-FROM golang:1.21-alpine3.19 as builder
+FROM golang:1.22-alpine3.18 as builder
 
-# set version
+# set versions and platforms
 ARG SEMAPHORE_VERSION
+ARG TARGETOS=linux
+ARG TARGETARCH=amd64
 
 RUN set -e && \
   echo "**** install build packages ****" && \
@@ -12,23 +14,26 @@ RUN set -e && \
     gcc \
     git \
     jq \
+    libc-dev \
     nodejs \
-    npm && \
+    npm \
+    tar \
+    unzip \
+    zip && \
+  echo "**** install task ****" && \
+  curl -sL https://taskfile.dev/install.sh | sh && \
   echo "**** download semaphore ****" && \
-  if [ -z ${SEMAPHORE_VERSION} ]; then \
+  if [ -z ${SEMAPHORE_VERSION+x} ]; then \
     SEMAPHORE_VERSION=$(curl -sL https://api.github.com/repos/semaphoreui/semaphore/releases/latest | \
       jq -r '.tag_name'); \
   fi && \
   git clone https://github.com/semaphoreui/semaphore.git /go/src/github.com/semaphoreui/semaphore && \
   cd /go/src/github.com/semaphoreui/semaphore && \
   git checkout ${SEMAPHORE_VERSION} && \
-  (cd $(go env GOPATH) && go install github.com/go-task/task/v3/cmd/task@latest) && \
   git config --global --add safe.directory /go/src/github.com/semaphoreui/semaphore && \
   task deps && \
-  task compile && \
-  task build:local GOOS=linux GOARCH=amd64 && \
+  task build GOOS=${TARGETOS} GOARCH=${TARGETARCH} && \
   mkdir /out && \
-  mv ./deployment/docker/common/semaphore-wrapper /out && \
   mv ./bin/semaphore /out
 
 # runtime
@@ -46,6 +51,7 @@ ENV SEMAPHORE_TMP_PATH="/tmp/semaphore" \
   SEMAPHORE_CONFIG_PATH="/config" \
   SEMAPHORE_DB_PATH="/config" \
   ANSIBLE_HOST_KEY_CHECKING=False
+ENV ANSIBLE_VERSION=9.4.0
 
 COPY --from=builder /out/* /usr/local/bin/
 
@@ -72,13 +78,22 @@ RUN \
     py3-virtualenv \
     rsync \
     sshpass && \
+  curl -o \
+    /usr/local/bin/server-wrapper -L \
+    "https://raw.githubusercontent.com/semaphoreui/semaphore/develop/deployment/docker/server/server-wrapper" && \
+  curl -o \
+    /tmp/semaphore/ansible.cfg -L \
+    "https://raw.githubusercontent.com/semaphoreui/semaphore/develop/deployment/docker/server/ansible.cfg" && \
   python3 -m venv /lsiopy && \
   pip3 install -U --no-cache \
-    cffi \
     pip && \
   pip3 install --no-cache \
-    ansible \
-    passlib && \
+    ansible==${ANSIBLE_VERSION} \
+    boto3 \
+    botocore \
+    netaddr \
+    passlib \
+    requests && \
   echo "**** cleanup ****" && \
   for cleanfiles in *.pyc *.pyo; do \
     find /usr/lib/python3.* -iname "${cleanfiles}" -delete; \
