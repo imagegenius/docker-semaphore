@@ -3,8 +3,6 @@ FROM golang:1.22-alpine3.18 as builder
 
 # set versions and platforms
 ARG SEMAPHORE_VERSION
-ARG TARGETOS=linux
-ARG TARGETARCH=arm64
 
 RUN set -e && \
   echo "**** install build packages ****" && \
@@ -33,7 +31,7 @@ RUN set -e && \
   sed -i 's/\$(uname -m)/arm64/g' Taskfile.yml && \
   git config --global --add safe.directory /go/src/github.com/semaphoreui/semaphore && \
   task deps && \
-  task build GOOS=${TARGETOS} GOARCH=${TARGETARCH} && \
+  task build GOOS=linux GOARCH=arm64 && \
   mkdir /out && \
   mv ./bin/semaphore /out
 
@@ -80,8 +78,12 @@ RUN \
     rsync \
     sshpass && \
   curl -o \
-    /usr/local/bin/server-wrapper -L \
+  /usr/local/bin/server-wrapper -L \
     "https://raw.githubusercontent.com/semaphoreui/semaphore/develop/deployment/docker/server/server-wrapper" && \
+  chmod +x \
+    /usr/local/bin/server-wrapper && \
+  mkdir -p \
+    /tmp/semaphore/ && \
   curl -o \
     /tmp/semaphore/ansible.cfg -L \
     "https://raw.githubusercontent.com/semaphoreui/semaphore/develop/deployment/docker/server/ansible.cfg" && \
