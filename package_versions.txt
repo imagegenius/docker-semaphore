@@ -93,7 +93,7 @@ coreutils-fmt                           9.4-r2                                ap
 coreutils-sha512sum                     9.4-r2                                apk                          
 cross-spawn                             7.0.3                                 npm                          
 cryptography                            41.0.7                                python                       
-cryptography                            42.0.8                                python                       
+cryptography                            43.0.0                                python                       
 cssesc                                  3.0.0                                 npm                          
 curl                                    8.5.0-r0                              apk                          
 curl-dev                                8.5.0-r0                              apk                          
@@ -128,7 +128,7 @@ git-perl                                2.43.4-r0                             ap
 github.com/Azure/go-ntlmssp             v0.0.0-20221128193559-754e69321358    go-module                    
 github.com/Masterminds/squirrel         v1.5.4                                go-module                    
 github.com/ProtonMail/go-crypto         v1.0.0                                go-module                    
-github.com/ansible-semaphore/semaphore  v2.10.19                              go-module                    
+github.com/ansible-semaphore/semaphore  v2.10.20                              go-module                    
 github.com/cloudflare/circl             v1.3.7                                go-module                    
 github.com/coreos/go-oidc/v3            v3.9.0                                go-module                    
 github.com/creack/pty                   v1.1.21                               go-module                    
