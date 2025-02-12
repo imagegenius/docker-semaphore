@@ -50,8 +50,8 @@ bash                                   5.2.21-r0                             apk
 bin-links                              4.0.3                                 npm                          
 binary-extensions                      2.2.0                                 npm                          
 binutils                               2.41-r0                               apk                          
-boto3                                  1.36.16                               python                       
-botocore                               1.36.16                               python                       
+boto3                                  1.36.18                               python                       
+botocore                               1.36.18                               python                       
 brace-expansion                        2.0.1                                 npm                          
 brotli                                 1.1.0-r1                              apk                          
 brotli-dev                             1.1.0-r1                              apk                          
@@ -91,10 +91,10 @@ coreutils-fmt                          9.4-r2                                apk
 coreutils-sha512sum                    9.4-r2                                apk                          
 cross-spawn                            7.0.3                                 npm                          
 cryptography                           41.0.7                                python                       
-cryptography                           44.0.0                                python                       
+cryptography                           44.0.1                                python                       
 cssesc                                 3.0.0                                 npm                          
-curl                                   8.12.0-r0                             apk                          
-curl-dev                               8.12.0-r0                             apk                          
+curl                                   8.11.1-r1                             apk                          
+curl-dev                               8.11.1-r1                             apk                          
 dario.cat/mergo                        v1.0.0                                go-module                    
 debug                                  4.3.4                                 npm                          
 defaults                               1.0.4                                 npm                          
@@ -160,7 +160,7 @@ github.com/mdp/qrterminal/v3           v3.2.0                                go-
 github.com/pjbgf/sha1cd                v0.3.0                                go-module                    
 github.com/pquerna/otp                 v1.4.0                                go-module                    
 github.com/robfig/cron/v3              v3.0.1                                go-module                    
-github.com/semaphoreui/semaphore       v2.12.8                               go-module                    
+github.com/semaphoreui/semaphore       v2.12.9                               go-module                    
 github.com/sergi/go-diff               v1.3.2-0.20230802210424-5b0b94c5c0d3  go-module                    
 github.com/sirupsen/logrus             v1.9.3                                go-module                    
 github.com/skeema/knownhosts           v1.3.0                                go-module                    
@@ -222,8 +222,8 @@ libbsd                                 0.11.7-r3                             apk
 libbz2                                 1.0.8-r6                              apk                          
 libc-dev                               0.7.2-r5                              apk                          
 libc-utils                             0.7.2-r5                              apk                          
-libcrypto3                             3.1.7-r1                              apk                          
-libcurl                                8.12.0-r0                             apk                          
+libcrypto3                             3.1.8-r0                              apk                          
+libcurl                                8.11.1-r1                             apk                          
 libedit                                20230828.3.1-r3                       apk                          
 libexpat                               2.6.4-r0                              apk                          
 libffi                                 3.4.4-r3                              apk                          
@@ -250,7 +250,7 @@ libproc2                               4.0.4-r0                              apk
 libpsl                                 0.21.5-r0                             apk                          
 libpsl-dev                             0.21.5-r0                             apk                          
 libpsl-utils                           0.21.5-r0                             apk                          
-libssl3                                3.1.7-r1                              apk                          
+libssl3                                3.1.8-r0                              apk                          
 libstdc++                              13.2.1_git20231014-r0                 apk                          
 libstdc++-dev                          13.2.1_git20231014-r0                 apk                          
 libunistring                           1.1-r2                                apk                          
@@ -312,8 +312,8 @@ oniguruma                              6.9.9-r0                              apk
 openssh-client-common                  9.6_p1-r1                             apk                          
 openssh-client-default                 9.6_p1-r1                             apk                          
 openssh-keygen                         9.6_p1-r1                             apk                          
-openssl                                3.1.7-r1                              apk                          
-openssl-dev                            3.1.7-r1                              apk                          
+openssl                                3.1.8-r0                              apk                          
+openssl-dev                            3.1.8-r0                              apk                          
 p-map                                  4.0.0                                 npm                          
 packaging                              23.2                                  python                       
 packaging                              24.2                                  python                       
