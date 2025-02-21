@@ -50,8 +50,8 @@ bash                                   5.2.21-r0                             apk
 bin-links                              4.0.3                                 npm                          
 binary-extensions                      2.2.0                                 npm                          
 binutils                               2.41-r0                               apk                          
-boto3                                  1.36.21                               python                       
-botocore                               1.36.21                               python                       
+boto3                                  1.36.25                               python                       
+botocore                               1.36.25                               python                       
 brace-expansion                        2.0.1                                 npm                          
 brotli                                 1.1.0-r1                              apk                          
 brotli-dev                             1.1.0-r1                              apk                          
@@ -309,9 +309,9 @@ npm-registry-fetch                     16.1.0                                npm
 npm-user-validate                      2.0.0                                 npm                          
 npmlog                                 7.0.1                                 npm                          
 oniguruma                              6.9.9-r0                              apk                          
-openssh-client-common                  9.6_p1-r1                             apk                          
-openssh-client-default                 9.6_p1-r1                             apk                          
-openssh-keygen                         9.6_p1-r1                             apk                          
+openssh-client-common                  9.6_p1-r2                             apk                          
+openssh-client-default                 9.6_p1-r2                             apk                          
+openssh-keygen                         9.6_p1-r2                             apk                          
 openssl                                3.1.8-r0                              apk                          
 openssl-dev                            3.1.8-r0                              apk                          
 p-map                                  4.0.0                                 npm                          
