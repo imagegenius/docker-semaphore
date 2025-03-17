@@ -50,8 +50,8 @@ bash                                   5.2.21-r0                             apk
 bin-links                              4.0.3                                 npm                          
 binary-extensions                      2.2.0                                 npm                          
 binutils                               2.41-r1                               apk                          
-boto3                                  1.37.12                               python                       
-botocore                               1.37.12                               python                       
+boto3                                  1.37.14                               python                       
+botocore                               1.37.14                               python                       
 brace-expansion                        2.0.1                                 npm                          
 brotli                                 1.1.0-r1                              apk                          
 brotli-dev                             1.1.0-r1                              apk                          
@@ -160,7 +160,7 @@ github.com/mdp/qrterminal/v3           v3.2.0                                go-
 github.com/pjbgf/sha1cd                v0.3.0                                go-module                    
 github.com/pquerna/otp                 v1.4.0                                go-module                    
 github.com/robfig/cron/v3              v3.0.1                                go-module                    
-github.com/semaphoreui/semaphore       v2.12.17                              go-module                    
+github.com/semaphoreui/semaphore       v2.13.0                               go-module                    
 github.com/sergi/go-diff               v1.3.2-0.20230802210424-5b0b94c5c0d3  go-module                    
 github.com/sirupsen/logrus             v1.9.3                                go-module                    
 github.com/skeema/knownhosts           v1.3.0                                go-module                    
@@ -225,7 +225,7 @@ libc-utils                             0.7.2-r5                              apk
 libcrypto3                             3.1.8-r0                              apk                          
 libcurl                                8.12.1-r0                             apk                          
 libedit                                20230828.3.1-r3                       apk                          
-libexpat                               2.6.4-r0                              apk                          
+libexpat                               2.7.0-r0                              apk                          
 libffi                                 3.4.4-r3                              apk                          
 libgcc                                 13.2.1_git20231014-r0                 apk                          
 libgomp                                13.2.1_git20231014-r0                 apk                          
