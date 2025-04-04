@@ -49,8 +49,8 @@ bash                                   5.2.21-r0                             apk
 bin-links                              4.0.3                                 npm                         
 binary-extensions                      2.2.0                                 npm                         
 binutils                               2.41-r1                               apk                         
-boto3                                  1.37.26                               python                      
-botocore                               1.37.26                               python                      
+boto3                                  1.37.27                               python                      
+botocore                               1.37.27                               python                      
 brace-expansion                        2.0.1                                 npm                         
 brotli                                 1.1.0-r1                              apk                         
 brotli-dev                             1.1.0-r1                              apk                         
