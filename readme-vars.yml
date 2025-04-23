@@ -7,6 +7,10 @@ project_logo: "https://raw.githubusercontent.com/imagegenius/templates/main/unra
 project_blurb: "Semaphore is a modern UI for Ansible. It lets you easily run Ansible playbooks, get notifications about fails, control access to deployment system."
 project_github_repo_url: "https://github.com/imagegenius/docker-{{ project_name }}"
 
+project_deprecation_status: true
+project_deprecation_message: |
+  No longer use this image, alternative images exist.
+
 # supported architectures
 available_architectures:
   - { arch: "{{ arch_x86_64 }}", tag: "amd64-latest" }
